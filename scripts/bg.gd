@@ -1,6 +1,5 @@
 extends ParallaxBackground
 
-
 @export var bg_texture: CompressedTexture2D = preload("res://martian_mike_assets/textures/bg/Green.png")
 @export var scroll_speed = 15
 

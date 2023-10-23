@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2ludf4cek7tg"]
+
+[ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_mjoy6"]
+[ext_resource type="Texture2D" uid="uid://dquauth8s1fau" path="res://martian_mike_assets/textures/bg/Purple.png" id="3_8srel"]
+[ext_resource type="PackedScene" uid="uid://c5bjggxyyienf" path="res://scenes/bg.tscn" id="3_g1gg3"]
+[ext_resource type="FontFile" uid="uid://bli7tuyxftp1b" path="res://martian_mike_assets/fonts/Kenney Pixel Square.ttf" id="3_vu032"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uxken"]
+font = ExtResource("3_vu032")
+font_size = 42
+font_color = Color(0.631373, 0.266667, 0.94902, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2.525, 4.39)
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_mjoy6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BG" parent="CanvasLayer" instance=ExtResource("3_g1gg3")]
+bg_texture = ExtResource("3_8srel")
+
+[node name="Sprite2D" parent="CanvasLayer/BG/ParallaxLayer" index="0"]
+modulate = Color(0.239216, 0.45098, 0.352941, 1)
+scale = Vector2(1.0054, 1.01007)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -99.0
+offset_right = 20.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MARTIAN MIKE"
+label_settings = SubResource("LabelSettings_uxken")
+
+[node name="Exit" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 36.0
+offset_top = -16.0
+offset_right = 88.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_vu032")
+text = "EXIT"
+
+[node name="Start" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -4.0
+offset_right = -64.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_vu032")
+text = "START"
+
+[connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
+
+[editable path="CanvasLayer/BG"]

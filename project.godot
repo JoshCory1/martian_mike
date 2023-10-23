@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Martian Mike"
-run/main_scene="res://scenes/level.tscn"
+run/main_scene="res://scenes/start_screen.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
+AudioPlayer="*res://scenes/audio_player.tscn"
 
 [display]
 
@@ -58,6 +63,7 @@ reset={
 2d_physics/layer_2="player"
 2d_physics/layer_3="death_zone"
 2d_physics/layer_4="trap"
+2d_physics/layer_5="exit_area"
 
 [rendering]
 

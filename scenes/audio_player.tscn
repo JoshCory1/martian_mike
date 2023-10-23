@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://chux8jfx67nlv"]
+
+[ext_resource type="Script" path="res://scripts/audio_player.gd" id="1_liynd"]
+[ext_resource type="AudioStream" uid="uid://cbju3ggjf1loa" path="res://martian_mike_assets/audio/the_field_of_dreams.mp3" id="1_qrsib"]
+
+[node name="AudioPlayer" type="Node"]
+script = ExtResource("1_liynd")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_qrsib")
+autoplay = true
