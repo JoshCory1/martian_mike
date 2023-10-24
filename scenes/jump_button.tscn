@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpnww6k1eg7wk"]
+
+[ext_resource type="Texture2D" uid="uid://dsf5yfjbv2e3w" path="res://martian_mike_assets/textures/joystick.png" id="1_264u8"]
+[ext_resource type="FontFile" uid="uid://bli7tuyxftp1b" path="res://martian_mike_assets/fonts/Kenney Pixel Square.ttf" id="2_ixvl5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u6vst"]
+radius = 30.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_8lq2s"]
+font = ExtResource("2_ixvl5")
+font_size = 180
+font_color = Color(0.14902, 0.392157, 1, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="JumpButton" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+shape = SubResource("CircleShape2D_u6vst")
+action = "jump"
+
+[node name="Sprite2D" type="Sprite2D" parent="TouchScreenButton"]
+modulate = Color(1, 1, 1, 0.415686)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_264u8")
+
+[node name="Label" type="Label" parent="TouchScreenButton/Sprite2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -599.5
+offset_top = -575.0
+offset_right = -480.5
+offset_bottom = -505.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "jump
+"
+label_settings = SubResource("LabelSettings_8lq2s")

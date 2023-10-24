@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8k5657fh3old"]
+[gd_scene load_steps=7 format=3 uid="uid://c8k5657fh3old"]
 
 [ext_resource type="Script" path="res://scripts/ui_layer.gd" id="1_4edbb"]
 [ext_resource type="PackedScene" uid="uid://djkqkb5nxfed7" path="res://scenes/hud.tscn" id="1_m4sxl"]
 [ext_resource type="PackedScene" uid="uid://c03csv6b2r12x" path="res://scenes/win_screen.tscn" id="2_71fge"]
+[ext_resource type="PackedScene" uid="uid://bpnww6k1eg7wk" path="res://scenes/jump_button.tscn" id="4_udhaf"]
+[ext_resource type="PackedScene" uid="uid://ncaqcuto5cj" path="res://scenes/touch_joystick.tscn" id="5_jhcai"]
+[ext_resource type="PackedScene" uid="uid://ds7y7lw52s6g8" path="res://scenes/quit_button.tscn" id="6_pfjtr"]
 
 [node name="UILayer" type="CanvasLayer"]
 script = ExtResource("1_4edbb")
@@ -11,3 +14,21 @@ script = ExtResource("1_4edbb")
 
 [node name="WinScreen" parent="." instance=ExtResource("2_71fge")]
 visible = false
+
+[node name="JumpButton" parent="." instance=ExtResource("4_udhaf")]
+offset_left = 427.0
+offset_top = 218.0
+offset_right = 427.0
+offset_bottom = 218.0
+
+[node name="TouchJoystick" parent="." instance=ExtResource("5_jhcai")]
+offset_left = 47.0
+offset_top = 218.0
+offset_right = 47.0
+offset_bottom = 218.0
+
+[node name="QuitButton" parent="." instance=ExtResource("6_pfjtr")]
+offset_left = 43.1513
+offset_top = 31.674
+offset_right = 43.1513
+offset_bottom = 31.674

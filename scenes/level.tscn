@@ -72,7 +72,8 @@ position = Vector2(2514, 204)
 position = Vector2(39, -12)
 
 [node name="JumpPad" parent="Objects" instance=ExtResource("3_y52tx")]
-position = Vector2(579, 218)
+position = Vector2(607, 218)
+jump_pad_force = 350
 
 [node name="JumpPad3" parent="Objects" instance=ExtResource("3_y52tx")]
 position = Vector2(1848, 154)
@@ -81,7 +82,7 @@ position = Vector2(1848, 154)
 position = Vector2(2772, 204)
 
 [node name="JumpPad2" parent="Objects" instance=ExtResource("3_y52tx")]
-position = Vector2(180, 217)
+position = Vector2(352, 219)
 
 [node name="TileMap" parent="." instance=ExtResource("7_luj0m")]
 position = Vector2(-57, 268)
@@ -102,4 +103,10 @@ position = Vector2(2911, 76)
 [node name="Player" parent="." instance=ExtResource("2_g1vvs")]
 position = Vector2(244, 145)
 
+[connection signal="joystick_moved" from="UILayer/TouchJoystick/JoyBase/JoyStick" to="Player" method="_on_joy_stick_joystick_moved"]
+[connection signal="joystick_released" from="UILayer/TouchJoystick/JoyBase/JoyStick" to="Player" method="_on_joy_stick_joystick_released"]
+
+[editable path="UILayer"]
+[editable path="UILayer/TouchJoystick"]
+[editable path="UILayer/TouchJoystick/JoyBase"]
 [editable path="BG"]

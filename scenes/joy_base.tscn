@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnpanp6aw115p"]
+
+[ext_resource type="Texture2D" uid="uid://dsf5yfjbv2e3w" path="res://martian_mike_assets/textures/joystick.png" id="1_pwl78"]
+[ext_resource type="Script" path="res://scripts/JoyStick.gd" id="2_rkqe3"]
+
+[node name="JoyBase" type="Sprite2D"]
+modulate = Color(1, 1, 1, 0.282353)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_pwl78")
+
+[node name="JoyStick" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_pwl78")
+script = ExtResource("2_rkqe3")
