@@ -76,4 +76,10 @@ position = Vector2(1034, 125)
 [node name="SpikeBall5" parent="Traps" instance=ExtResource("12_x5062")]
 position = Vector2(372, 31)
 
+[connection signal="joystick_moved" from="UILayer/TouchJoystick/JoyBase/JoyStick" to="Player" method="_on_joy_stick_joystick_moved"]
+[connection signal="joystick_released" from="UILayer/TouchJoystick/JoyBase/JoyStick" to="Player" method="_on_joy_stick_joystick_released"]
+
+[editable path="UILayer"]
+[editable path="UILayer/TouchJoystick"]
+[editable path="UILayer/TouchJoystick/JoyBase"]
 [editable path="BG"]

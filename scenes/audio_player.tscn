@@ -8,3 +8,4 @@ script = ExtResource("1_liynd")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_qrsib")
+autoplay = true

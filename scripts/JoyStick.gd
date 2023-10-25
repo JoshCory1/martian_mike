@@ -25,4 +25,4 @@ func _input(event):
 			position.y = 0
 			emit_signal("joystick_released")
 		if event.pressed:
-			touchInsideJoystick = (event.position - global_position).length() <= 20
+			touchInsideJoystick = (event.position - global_position).length() <= maxLength
